@@ -9,8 +9,8 @@ This python package can be used in django project to  tracing service with jaege
   settings.py in django
   ```python
     MIDDLEWARE = [
-        'huipy.tracer.middleware.TraceMiddleware',
-        # 其他中间件
+        'jaegertrace.middleware.TraceMiddleware',
+        # other middleware
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'corsheaders.middleware.CorsMiddleware',
@@ -26,7 +26,6 @@ This python package can be used in django project to  tracing service with jaege
   ```
 * Using **httpclient** for outbound request
    ```python
-    from tracer.httpclient import HttpClient
+    from jaegertrace.httpclient import HttpClient
     HttpClient(url='http://httpbin.org/get').get()
    ```
-
