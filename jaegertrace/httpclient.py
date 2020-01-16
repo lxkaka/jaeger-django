@@ -130,4 +130,4 @@ class HttpClient(object):
 
 
 class ServiceError(HTTPError):
-    """requests错误"""
+    """requests error"""
