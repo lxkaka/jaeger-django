@@ -14,11 +14,11 @@ SAMPLE_PARAM = 1
 if hasattr(settings, 'SAMPLE_PARAM'):
     SAMPLE_PARAM = settings.SAMPLE_PARAM
 
-TRACE_ID_HEADER = 'zaihui-trace-id'
+TRACE_ID_HEADER = 'trace-id'
 if hasattr(settings, 'TRACE_ID_HEADER'):
     TRACE_ID_HEADER = settings.TRACE_ID_HEADER
 
-BAGGAGE_HEADER_PREFIX = 'zaihui-'
+BAGGAGE_HEADER_PREFIX = 'jaegertrace-'
 if hasattr(settings, 'BAGGAGE_HEADER_PREFIX'):
     BAGGAGE_HEADER_PREFIX = settings.BAGGAGE_HEADER_PREFIX
 

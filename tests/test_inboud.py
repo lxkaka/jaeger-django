@@ -6,9 +6,9 @@ import requests
 from django.test.client import RequestFactory
 from jaeger_client import Config
 
-from huipy.tracer.httpclient import before_http_request
-from huipy.tracer.middleware import TraceMiddleware
-from huipy.tracer.request_context import get_current_span
+from jaegertrace.httpclient import before_http_request
+from jaegertrace.middleware import TraceMiddleware
+from jaegertrace.request_context import get_current_span
 
 
 class InboundTests(unittest.TestCase):

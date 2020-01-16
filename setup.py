@@ -10,10 +10,11 @@ with open('requirements.txt', 'rb') as f:
 
 setup(
     name='jaeger-django',
-    version='1.0.1',
+    version='1.0.2',
     description='service tracing using jaeger in django project',
     author='lxkaka',
     author_email='linxiaoking@gamil.com',
+    long_description_content_type='text/markdown',
     long_description=long_description,
     packages=find_packages(),
     license='Apache License 2.0',

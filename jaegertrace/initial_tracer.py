@@ -5,7 +5,8 @@ import opentracing.tracer
 from django.conf import settings
 from jaeger_client import Config
 
-from huipy.tracer import conf
+import conf
+
 
 
 def initialize_global_tracer():

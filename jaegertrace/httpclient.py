@@ -16,9 +16,8 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import parse_url
 
 
-from huipy.logger import request_logger
-from huipy.tracer.initial_tracer import initialize_global_tracer
-from huipy.tracer.request_context import get_current_span
+from initial_tracer import initialize_global_tracer
+from request_context import get_current_span
 
 logger = logging.getLogger(__name__)
 
@@ -111,7 +110,7 @@ class HttpClient(object):
 
             duration = int((time.time() - self._start) * 1000)
             body = json.dumps(response.request.body.decode()) if isinstance(response.request.body, bytes) else '-'
-            request_logger.info(
+            logger.info(
                 '{method} {duration} {url} ${body}$ {status_code} "{reason}" ${res_content}$ {service_name}'.format(
                     method=response.request.method,
                     duration=duration,
